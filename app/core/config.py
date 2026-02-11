@@ -1,7 +1,7 @@
 from pydantic_settings import BaseSettings
 from urllib.parse import quote_plus
 from pathlib import Path
-
+from pydantic import Field
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 ENV_PATH = BASE_DIR / ".env"
 
