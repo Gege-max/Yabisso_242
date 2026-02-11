@@ -12,10 +12,9 @@ class Settings(BaseSettings):
     POSTGRES_USER: str
     POSTGRES_PASSWORD: str
     POSTGRES_DB: str
-    POSTGRES_HOST: str 
-    POSTGRES_PORT: str
-    
-    REDIS_URL: str
+    POSTGRES_HOST: str = "localhost"
+    POSTGRES_PORT: int = 5432
+
     # ========================
     # SECURITY
     # ========================
@@ -23,6 +22,15 @@ class Settings(BaseSettings):
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60
 
+
+      # =========================
+    # Redis
+    # =========================
+    REDIS_URL: str = Field(..., description="Redis connection URL")
+
+    # ========================
+    # SECURITY
+    # ========================
     # ========================
     # RATE LIMIT
     # ========================
