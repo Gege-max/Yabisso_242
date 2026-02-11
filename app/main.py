@@ -11,7 +11,7 @@ app = FastAPI(
 app.include_router(soumission.router)
 app.include_router(admin.router)
 origins = [
-    https://yabisso242.org
+    "https://yabisso242.org"
 ]
 app.add_middleware(
     CORSMiddleware,
